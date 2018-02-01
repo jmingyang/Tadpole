@@ -97,7 +97,7 @@
 			
 		// });
 		
-		input.focus();
+		// input.focus();
 		$("#dazibtn").click(function(){
 			// input.focus();
 			// $("#dazi").focus();
