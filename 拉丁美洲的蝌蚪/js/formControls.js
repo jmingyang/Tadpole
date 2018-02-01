@@ -11,7 +11,7 @@
 
 		var closechat = function() {
 			hidden = true;
-			input.css("opacity","0");
+			input.css("opacity","1");
 			messagePointer = messageHistory.length;
 			input.val('');
 			chatText.text('')
@@ -99,7 +99,7 @@
 		
 		input.focus();
 		$("#dazibtn").click(function(){
-			input.focus();
+			// input.focus();
 			$("#dazi").focus();
 			var str = $("#dazi").val();
 			if(str.length!=0){
