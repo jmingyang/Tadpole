@@ -11,7 +11,7 @@
 
 		var closechat = function() {
 			hidden = true;
-			input.css("opacity","1");
+			input.css("opacity","0");
 			messagePointer = messageHistory.length;
 			input.val('');
 			chatText.text('')
