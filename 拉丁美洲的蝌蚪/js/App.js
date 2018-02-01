@@ -116,7 +116,7 @@ var App = function(aSettings, aCanvas) {
 	
 	app.mousedown = function(e) {
 		if(e.srcElement.id.indexOf("dazi")!=-1 || e.srcElement.id=="talkInfo"){
-			// $('#dazi').trigger('focus');
+		    $('#dazi').focus();
 			return;
 		}
 		
