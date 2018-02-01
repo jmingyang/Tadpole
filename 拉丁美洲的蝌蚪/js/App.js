@@ -115,7 +115,7 @@ var App = function(aSettings, aCanvas) {
 	}
 	
 	app.mousedown = function(e) {
-		if(e.srcElement.id.indexOf("dazi")!=-1 || e.srcElement.id=="talkInfo" || e.srcElement.id=="talkdiv"){
+		if(e.srcElement.id.indexOf("dazi")!=-1 || e.srcElement.id=="talkInfo"){
 			return;
 		}
 		mouse.clicking = true;
