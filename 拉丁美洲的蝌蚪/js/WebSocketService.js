@@ -54,11 +54,11 @@ var WebSocketService = function(model, webSocket) {
 	this.messageHandler = function(data) {
 		var tadpole = model.tadpoles[data.id];
 
-		var str = data.id + "：" + data.message + "<br />";
+		var str = data.id + " ：  " + data.message + "<br />";
 		var myDate = new Date();
 		var mytime=myDate.toLocaleTimeString();
 		if(tadpole){
-				str = mytime + "  " + tadpole.name + "：" + data.message + "<br />";
+				str = tadpole.name + "：" + data.message + "<br />";
 			}
 			$("#talkInfo").append(str);	
 			
