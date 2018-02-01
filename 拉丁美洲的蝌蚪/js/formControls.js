@@ -99,6 +99,7 @@
 		
 		input.focus();
 		$("#dazibtn").click(function(){
+			$("#dazi").focus();
 			var str = $("#dazi").val();
 			if(str.length!=0){
 				app.sendMessage(str);
@@ -107,31 +108,31 @@
 			$("#dazi").val("");
 		});
 		
-		document.getElementById("dazi").onkeydown = function (ev){
-                var oEvent = ev || event;
+		// document.getElementById("dazi").onkeydown = function (ev){
+  //               var oEvent = ev || event;
                 
                 
-                //js阻止事件冒泡
-                oEvent.cancelBubble = true;
-                oEvent.stopPropagation();
+  //               //js阻止事件冒泡
+  //               oEvent.cancelBubble = true;
+  //               oEvent.stopPropagation();
 
-                //js阻止链接默认行为，没有停止冒泡
-                //oEvent.preventDefault(); 
-                //return false;
-            }
+  //               //js阻止链接默认行为，没有停止冒泡
+  //               //oEvent.preventDefault(); 
+  //               //return false;
+  //           }
 
-		$("#dazi").focus(function(e){
-			e.preventDefault()
-		});
-		$("#dazi").blur(function(e){
-			document.addEventListener('keydown',    app.keydown, false);
-			document.addEventListener('keyup',    app.keyup, false);
-		});
+		// $("#dazi").focus(function(e){
+		// 	e.preventDefault()
+		// });
+		// $("#dazi").blur(function(e){
+		// 	document.addEventListener('keydown',    app.keydown, false);
+		// 	document.addEventListener('keyup',    app.keyup, false);
+		// });
 		
-		$("#dazi").keyup(function(e){
-			document.removeEventListener('keydown',    app.keydown);
-			document.removeEventListener('keyup',    app.keyup);
-		});
+		// $("#dazi").keyup(function(e){
+		// 	document.removeEventListener('keydown',    app.keydown);
+		// 	document.removeEventListener('keyup',    app.keyup);
+		// });
 
 	}
 	
