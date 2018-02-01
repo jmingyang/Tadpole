@@ -121,7 +121,7 @@
             }
 
 		$("#dazi").focus(function(e){
-			
+			e.preventDefault()
 		});
 		$("#dazi").blur(function(e){
 			document.addEventListener('keydown',    app.keydown, false);
