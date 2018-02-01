@@ -108,7 +108,7 @@
 			$("#dazi").val("");
 		});
 		$("#dazi").click(function(){
-			// alert("asd");
+			alert("asd");
 			this.focus();
 		});
 		
