@@ -107,6 +107,10 @@
 			
 			$("#dazi").val("");
 		});
+		$("#dazi").click(function(){
+			// alert("asd");
+			this.focus();
+		});
 		
 		// document.getElementById("dazi").onkeydown = function (ev){
   //               var oEvent = ev || event;
