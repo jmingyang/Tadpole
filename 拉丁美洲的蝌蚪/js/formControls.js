@@ -96,10 +96,11 @@
 			}
 			
 		});
-		// input.focus(function(e) {
-		// 	alert("asd");
+		$("#chatdiv").click(function(e) {
+
+			$("#chat").removeAttr("disabled");
 			
-		// });
+		});
 		// input.focus();
 		input.css("opacity","1");
 	}

@@ -116,7 +116,7 @@ var App = function(aSettings, aCanvas) {
 	
 	app.mousedown = function(e) {
 		if(e.srcElement.id.indexOf("chat")!=-1 ){
-			$("#chat").attr("disabled","false");
+			// $("#chat").attr("disabled","false");
 		    $('#chat').focus();
 			return;
 		}
