@@ -116,10 +116,11 @@ var App = function(aSettings, aCanvas) {
 	
 	app.mousedown = function(e) {
 		if(e.srcElement.id.indexOf("chat")!=-1 ){
+			$("#chat").attr("disabled","false");
 		    $('#chat').focus();
 			return;
 		}
-		// $('#chat').css();
+		$("#chat").attr("disabled","disabled");
 		mouse.clicking = true;
 
 		if(mouse.tadpole && mouse.tadpole.hover && mouse.tadpole.onclick(e)) {
