@@ -115,7 +115,7 @@ var App = function(aSettings, aCanvas) {
 	}
 	
 	app.mousedown = function(e) {
-		if(e.srcElement.id.indexOf("chat")!=-1 || e.srcElement.id=="talkInfo"){
+		if(e.srcElement.id.indexOf("chat")!=-1 ){
 		    $('#chat').focus();
 			return;
 		}
@@ -128,8 +128,6 @@ var App = function(aSettings, aCanvas) {
 		if(model.userTadpole && e.which == 1) {
 			model.userTadpole.momentum = model.userTadpole.targetMomentum = model.userTadpole.maxMomentum*2;
 		}
-
-
 	};
 	
 	app.mouseup = function(e) {
