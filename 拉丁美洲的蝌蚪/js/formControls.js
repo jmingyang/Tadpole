@@ -10,8 +10,8 @@
 		var messagePointer = -1;
 
 		var closechat = function() {
-			hidden = true;
-			input.css("opacity","0");
+			// hidden = true;
+			// input.css("opacity","0");
 			messagePointer = messageHistory.length;
 			input.val('');
 			chatText.text('')
@@ -35,7 +35,7 @@
 				setTimeout(updateDimensions,0.1);
 				input.css("opacity","1");		
 			} else {
-				// closechat();
+				closechat();
 			}
 			
 			if(!hidden) {
@@ -59,7 +59,7 @@
 						}
 						else 
 						{
-							// closechat();
+							closechat();
 							return;
 						}
 					}
@@ -79,7 +79,7 @@
 				input.css("opacity","1");
 				hidden = false;
 			} else {
-				// closechat();
+				closechat();
 			}
 			if(!hidden) {
 				if(k == keys.esc || k == keys.enter || (k == keys.space && input.val().length > 35)) {
@@ -88,7 +88,7 @@
 			    			messagePointer = messageHistory.length;
 						app.sendMessage(input.val());
 					}
-					// closechat();
+					closechat();
 				}
 				
 				e.stopPropagation();
@@ -96,6 +96,7 @@
 			}
 			
 		});
+		
 		
 		input.focus();
 		input.css("opacity","1");

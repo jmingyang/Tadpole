@@ -115,18 +115,18 @@ var App = function(aSettings, aCanvas) {
 	}
 	
 	app.mousedown = function(e) {
-		// if(e.srcElement.id.indexOf("chat")!=-1 || e.srcElement.id=="talkInfo"){
-		//     $('#chat').focus();
-		// 	return;
-		// }
-		$('#chat').blur();
+		if(e.srcElement.id.indexOf("chat")!=-1 || e.srcElement.id=="talkInfo"){
+		    $('#chat').focus();
+			return;
+		}
+		
 		mouse.clicking = true;
 
 		if(mouse.tadpole && mouse.tadpole.hover && mouse.tadpole.onclick(e)) {
             return;
 		}
 		if(model.userTadpole && e.which == 1) {
-			model.userTadpole.momentum = model.userTadpole.targetMomentum = model.userTadpole.maxMomentum*10;
+			model.userTadpole.momentum = model.userTadpole.targetMomentum = model.userTadpole.maxMomentum*2;
 		}
 
 
