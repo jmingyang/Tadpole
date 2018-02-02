@@ -110,16 +110,26 @@ var Tadpole = function() {
 		}
 	};
 	
+
+	var getRandomColor = function(){var r = Math.floor(Math.random() * 150+100); //随机生成256以内r值
+ 		var g = Math.floor(Math.random() * 100+100); //随机生成256以内g值
+		var b = Math.floor(Math.random() * 100+100); //随机生成256以内b值
+ 		
+ 		return `rgba(${r},${g},${b},`;
+	}
+	var color = getRandomColor();
 	this.draw = function(context) {
 		var opacity = Math.max(Math.min(20 / Math.max(tadpole.timeSinceLastServerUpdate-300,1),1),.2).toFixed(3);
+		
+		// if(tadpole.hover && isAuthorized()) {
+		// 	context.fillStyle = 'rgba(192, 253, 247,'+opacity+')';
+		// 	// context.shadowColor   = 'rgba(249, 136, 119, '+opacity*0.7+')';
+		// }
+		// else {
+		// 	context.fillStyle = 'rgba(226,219,226,'+opacity+')';
+		// }
 
-		if(tadpole.hover && isAuthorized()) {
-			context.fillStyle = 'rgba(192, 253, 247,'+opacity+')';
-			// context.shadowColor   = 'rgba(249, 136, 119, '+opacity*0.7+')';
-		}
-		else {
-			context.fillStyle = 'rgba(226,219,226,'+opacity+')';
-		}
+		context.fillStyle = color+opacity+')';
 		
 		context.shadowOffsetX = 0;
 		context.shadowOffsetY = 0;
