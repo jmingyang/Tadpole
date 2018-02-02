@@ -19,7 +19,8 @@ var Camera = function(aCanvas, aContext, x, y) {
 		
 		// Reset transform matrix
 		context.setTransform(1,0,0,1,0,0);
-		context.fillStyle = 'hsl('+backgroundColor+',50%,10%)';
+		// context.fillStyle = 'hsl('+backgroundColor+',50%,10%)';
+		context.fillStyle = 'hsl(240,50%,10%)';
 		context.fillRect(0,0,canvas.width, canvas.height);
 		
 		context.translate(translateX, translateY);
