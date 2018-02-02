@@ -119,7 +119,7 @@ var App = function(aSettings, aCanvas) {
 		    $('#chat').focus();
 			return;
 		}
-		
+		$('#chat').blur();
 		mouse.clicking = true;
 
 		if(mouse.tadpole && mouse.tadpole.hover && mouse.tadpole.onclick(e)) {
