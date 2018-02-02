@@ -22,7 +22,7 @@
 			var width = chatText.width() + 30;
 			input.css({
 				width: width,
-				marginLeft: (width/2)*-1
+				marginLeft: (width/2)*-1-20
 			});
 		};
 
@@ -103,6 +103,7 @@
 		});
 		// input.focus();
 		input.css("opacity","1");
+		updateDimensions();
 	}
 	
 	$(function() {
