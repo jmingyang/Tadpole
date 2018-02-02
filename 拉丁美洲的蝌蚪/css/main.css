@@ -13,10 +13,10 @@ html {
 	cursor: caret;
 	background: #000;
 }
-*:not(input,textarea) { 
+/**:not(input,textarea) { 
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
-}
+}*/
 
 body {
 	font-family: "Microsoft YaHei","proxima-nova-1","proxima-nova-2", arial, sans-serif;
