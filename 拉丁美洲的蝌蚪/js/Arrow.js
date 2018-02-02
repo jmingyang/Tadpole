@@ -49,7 +49,7 @@ var Arrow = function(tadpole, camera) {
 			var side2 = calcPoint(x, y, this.angle, 0.5, size);
 
 			// Draw arrow
-			context.fillStyle = 'rgba(255,255,255,'+arrow.opacity+')';
+			context.fillStyle = 'rgba(178,34,34,'+arrow.opacity+')';
 			context.beginPath();
 			context.moveTo(point.x, point.y);
 			context.lineTo(side1.x, side1.y);
