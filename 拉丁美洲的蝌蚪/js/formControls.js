@@ -96,7 +96,10 @@
 			}
 			
 		});
-		
+		// input.focus(function(e) {
+		// 	alert("asd");
+			
+		// });
 		// input.focus();
 		input.css("opacity","1");
 	}
