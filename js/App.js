@@ -202,11 +202,23 @@ var App = function(aSettings, aCanvas) {
     }    
 	}
 	app.touchend = function(e) {
+		if(e.srcElement.id.indexOf("chat")!=-1 ){
+			// $("#chat").attr("disabled","false");
+		    $('#chat').focus();
+			return;
+		}
+		$("#chat").attr("disabled","disabled");
 	  if(model.userTadpole) {
 			model.userTadpole.targetMomentum = 0;
 		}
 	}
 	app.touchmove = function(e) {
+		if(e.srcElement.id.indexOf("chat")!=-1 ){
+			// $("#chat").attr("disabled","false");
+		    $('#chat').focus();
+			return;
+		}
+		$("#chat").attr("disabled","disabled");
 	  e.preventDefault();
     
     var touch = e.changedTouches.item(0);
