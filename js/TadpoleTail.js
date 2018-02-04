@@ -1,6 +1,8 @@
 var TadpoleTail = function(tadpole) {
 	var tail = this;
 	tail.joints = [];
+
+	tail.big=1;
 	
 	var tadpole = tadpole;
 	var jointSpacing = 1.4;
@@ -42,7 +44,7 @@ var TadpoleTail = function(tadpole) {
 			var tailJoint = tail.joints[i];
 			
 			var falloff = (tail.joints.length - i) / tail.joints.length;
-			var jointSize =  (tadpole.size - 1.8) * falloff;
+			var jointSize =  (tadpole.size*tail.big - 1.8) * falloff;
 			
 			var x1 = tailJoint.x + Math.cos(tailJoint.angle + Math.PI * 1.5) * jointSize;
 			var y1 = tailJoint.y + Math.sin(tailJoint.angle + Math.PI * 1.5) * jointSize;

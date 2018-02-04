@@ -1,6 +1,8 @@
 var Tadpole = function() {
 	var tadpole = this;
 	
+	this.big = 1;
+
 	this.x = Math.random() * 300 - 150;
 	this.y = Math.random() * 300 - 150;
 	this.size = 4;
@@ -46,7 +48,7 @@ var Tadpole = function() {
 		}
 
 		// Update tadpole hover/mouse state
-		if(Math.sqrt(Math.pow(tadpole.x - mouse.worldx,2) + Math.pow(tadpole.y - mouse.worldy,2)) < tadpole.size+2) {
+		if(Math.sqrt(Math.pow(tadpole.x - mouse.worldx,2) + Math.pow(tadpole.y - mouse.worldy,2)) < tadpole.size*this.big+2) {
 			tadpole.hover = true;
 			mouse.tadpole = tadpole;
 		}
@@ -138,7 +140,7 @@ var Tadpole = function() {
 		
 		// Draw circle
 		context.beginPath();
-		context.arc(tadpole.x, tadpole.y, tadpole.size, tadpole.angle + Math.PI * 2.7, tadpole.angle + Math.PI * 1.3, true); 
+		context.arc(tadpole.x, tadpole.y, tadpole.size*this.big, tadpole.angle + Math.PI * 2.7, tadpole.angle + Math.PI * 1.3, true); 
 		
 		tadpole.tail.draw(context);
 		
