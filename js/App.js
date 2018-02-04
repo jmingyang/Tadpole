@@ -183,6 +183,12 @@ var App = function(aSettings, aCanvas) {
 	
 	app.touchstart = function(e) {
 	  e.preventDefault();
+	  if(e.srcElement.id.indexOf("chat")!=-1 ){
+			// $("#chat").attr("disabled","false");
+		    $('#chat').focus();
+			return;
+		}
+		$("#chat").attr("disabled","disabled");
 	  mouse.clicking = true;		
 		
 		if(model.userTadpole) {
