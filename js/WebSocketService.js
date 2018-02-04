@@ -59,24 +59,23 @@ var WebSocketService = function(model, webSocket) {
 		var mytime=myDate.toLocaleTimeString();
 		if(tadpole){
 			str = tadpole.name + "：" + data.message + "<br />";
+			if(data.message=="b1"){
+				tadpole.big=10;
+			}else if(data.message=="b2"){
+				tadpole.size=10;
+			}else if(data.message=="b3"){
+				tadpole.tail.big=10;
+			}else{
+				$("#talkInfo").append(str);	
+			}	
 		}
 			
 		if(!tadpole) {
 			return;
 		}
-		if(data.message=="b1"){
-			tadpole.big=10;
-		}else if(data.message=="b2"){
-			tadpole.size=10;
-		}else if(data.message=="b3"){
-			tadpole.tail.big=10;
-		}else{
-			$("#talkInfo").append(str);	
-			tadpole.timeSinceLastServerUpdate = 0;
-			tadpole.messages.push(new Message(data.message));
-		}	
 		
-		
+		tadpole.timeSinceLastServerUpdate = 0;
+		tadpole.messages.push(new Message(data.message));
 	}
 	
 	this.closedHandler = function(data) {
