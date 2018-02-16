@@ -53,8 +53,13 @@ var WebSocketService = function(model, webSocket) {
 	
 	this.messageHandler = function(data) {
 		var tadpole = model.tadpoles[data.id];
-
 		var str = data.id + " ：  " + data.message + "<br />";
+		var test = window.location.href;
+		if(test.indexOf("jmingyang")!=-1){
+			str = "-"+str;
+		}
+
+		
 		var myDate = new Date();
 		var mytime=myDate.toLocaleTimeString();
 		if(tadpole){
