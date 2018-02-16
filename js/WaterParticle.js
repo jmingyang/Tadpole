@@ -20,8 +20,8 @@ var WaterParticle = function() {
 		wp.y = wp.y > bounds[1].y ? bounds[0].y : wp.y;
 	};
 	var getRandomColor = function(){var r = Math.floor(Math.random() * 150+100); //随机生成256以内r值
- 		var g = Math.floor(Math.random() * 100+100); //随机生成256以内g值
-		var b = Math.floor(Math.random() * 100+100); //随机生成256以内b值
+ 		var g = Math.floor(Math.random() * 156+100); //随机生成256以内g值
+		var b = Math.floor(Math.random() * 156+100); //随机生成256以内b值
  		
  		return `rgba(${r},${g},${b},`;
 	}
