@@ -138,7 +138,7 @@ var WebSocketService = function(model, webSocket) {
 
 		var test = window.location.href;
 		if (test.indexOf("jmingyang") != -1 ) {
-			msg =  "：" + msg;
+			msg =  "--" + msg;
 		}
 
 		if (regexp.test(msg)) {
