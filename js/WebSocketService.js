@@ -54,12 +54,7 @@ var WebSocketService = function(model, webSocket) {
 	this.messageHandler = function(data) {
 		var tadpole = model.tadpoles[data.id];
 		var str = data.id + " ：  " + data.message + "<br />";
-		var test = window.location.href;
-		if(test.indexOf("jmingyang")!=-1){
-			str = "-"+str;
-		}
 
-		
 		var myDate = new Date();
 		var mytime=myDate.toLocaleTimeString();
 		if(tadpole){
@@ -131,6 +126,12 @@ var WebSocketService = function(model, webSocket) {
 	
 	this.sendMessage = function(msg) {
 		var regexp = /name: ?(.+)/i;
+
+		var test = window.location.href;
+		if(test.indexOf("jmingyang")!=-1){
+			msg = "-" + msg;
+		}
+
 		if(regexp.test(msg)) {
 			model.userTadpole.name = msg.match(regexp)[1];
 			$.cookie('todpole_name', model.userTadpole.name, {expires:14});
