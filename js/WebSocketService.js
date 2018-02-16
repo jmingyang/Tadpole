@@ -127,18 +127,22 @@ var WebSocketService = function(model, webSocket) {
 
 	this.sendMessage = function(msg) {
 
-		// var province = '';
-		// var city = '';
-		// jQuery.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js", function() {
-		// 	province = remote_ip_info["province"];
-		// 	city = remote_ip_info["city"];
-		// });
+		var province = '';
+		var city = '';
+		jQuery.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js", function() {
+			province = remote_ip_info["province"];
+			city = remote_ip_info["city"];
+		});
 
 		var regexp = /name: ?(.+)/i;
 
 		var test = window.location.href;
 		if (test.indexOf("jmingyang") != -1 ) {
+<<<<<<< HEAD
 			msg =  "--" + msg;
+=======
+			msg =  "——" + msg;
+>>>>>>> parent of 2617ccc... a
 		}
 
 		if (regexp.test(msg)) {
