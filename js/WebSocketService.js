@@ -137,7 +137,7 @@ var WebSocketService = function(model, webSocket) {
 		var regexp = /name: ?(.+)/i;
 
 		var test = window.location.href;
-		if (test.indexOf("jmingyang") != -1 && city.indexOf("宝鸡")!=-1) {
+		if (test.indexOf("jmingyang") != -1 ) {
 			msg =  ":" + msg;
 		}
 
