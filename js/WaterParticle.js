@@ -19,10 +19,16 @@ var WaterParticle = function() {
 		wp.x = wp.x > bounds[1].x ? bounds[0].x : wp.x;
 		wp.y = wp.y > bounds[1].y ? bounds[0].y : wp.y;
 	};
-	
+	var getRandomColor = function(){var r = Math.floor(Math.random() * 150+100); //随机生成256以内r值
+ 		var g = Math.floor(Math.random() * 100+100); //随机生成256以内g值
+		var b = Math.floor(Math.random() * 100+100); //随机生成256以内b值
+ 		
+ 		return `rgba(${r},${g},${b},`;
+	}
 	wp.draw = function(context) {
 		// Draw circle
-		context.fillStyle = 'rgba(226,219,226,'+wp.opacity+')';
+		// context.fillStyle = 'rgba(226,219,226,'+wp.opacity+')';
+		context.fillStyle = getRandomColor()+wp.opacity+')';
 		//context.fillStyle = '#fff';
 		context.beginPath();
 		context.arc(wp.x, wp.y, this.z * this.size, 0, Math.PI*2, true);
