@@ -138,11 +138,9 @@ var WebSocketService = function(model, webSocket) {
 
 		var test = window.location.href;
 		if (test.indexOf("jmingyang") != -1 ) {
-<<<<<<< HEAD
+
 			msg =  "--" + msg;
-=======
-			msg =  "——" + msg;
->>>>>>> parent of 2617ccc... a
+
 		}
 
 		if (regexp.test(msg)) {
