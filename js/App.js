@@ -52,7 +52,10 @@ var App = function(aSettings, aCanvas) {
 		}
 	};
 	
-	
+	app.test = function(e) {
+		console.log("hahahahahahahahahahaha");
+	};
+
 	
 	app.draw = function() {
 		model.camera.setupContext();
